@@ -23,7 +23,7 @@ const C5_Assessment_Instructions = () => {
                 const token = localStorage.getItem("token");
 
                 const response = await fetch(
-                    "http://localhost:5000/api/candidates/me/skills",
+                    "https://skillbridge-adca.onrender.com/api/candidates/me/skills",
                     {
                         headers: {
                             Authorization: `Bearer ${token}`,
@@ -80,7 +80,7 @@ const C5_Assessment_Instructions = () => {
              * - an assessment is already in progress
              */
             const statusResponse = await fetch(
-                `http://localhost:5000/api/candidates/me/skills/${skillId}/verify`,
+                `https://skillbridge-adca.onrender.com/api/candidates/me/skills/${skillId}/verify`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -124,7 +124,7 @@ const C5_Assessment_Instructions = () => {
              */
             if (existingAttempt?.status === "Created") {
                 const startResponse = await fetch(
-                    `http://localhost:5000/api/candidates/me/skills/${skillId}/verify/start`,
+                    `https://skillbridge-adca.onrender.com/api/candidates/me/skills/${skillId}/verify/start`,
                     {
                         method: "POST",
                         headers: {
@@ -170,7 +170,7 @@ const C5_Assessment_Instructions = () => {
              * This also allows a completed/verified skill to be retaken.
              */
             const createResponse = await fetch(
-                `http://localhost:5000/api/candidates/me/skills/${skillId}/verify`,
+                `https://skillbridge-adca.onrender.com/api/candidates/me/skills/${skillId}/verify`,
                 {
                     method: "POST",
                     headers: {
@@ -194,7 +194,7 @@ const C5_Assessment_Instructions = () => {
              * 5. Start the newly created attempt.
              */
             const startResponse = await fetch(
-                `http://localhost:5000/api/candidates/me/skills/${skillId}/verify/start`,
+                `https://skillbridge-adca.onrender.com/api/candidates/me/skills/${skillId}/verify/start`,
                 {
                     method: "POST",
                     headers: {

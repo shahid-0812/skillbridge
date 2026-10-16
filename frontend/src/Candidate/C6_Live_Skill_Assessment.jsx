@@ -52,7 +52,7 @@ const C6_Live_Skill_Assessment = () => {
                 const token = localStorage.getItem("token");
 
                 const response = await fetch(
-                    `http://localhost:5000/api/candidates/me/skills/${parsedAssessment.skillId}/verify`,
+                    `https://skillbridge-adca.onrender.com/api/candidates/me/skills/${parsedAssessment.skillId}/verify`,
                     {
                         headers: {
                             Authorization: `Bearer ${token}`,
@@ -233,7 +233,7 @@ const C6_Live_Skill_Assessment = () => {
             );
 
             const response = await fetch(
-                `http://localhost:5000/api/candidates/me/skills/${assessment.skillId}/verify/attempts/${assessment.attemptId}/submit`,
+                `https://skillbridge-adca.onrender.com/api/candidates/me/skills/${assessment.skillId}/verify/attempts/${assessment.attemptId}/submit`,
                 {
                     method: "POST",
                     headers: {

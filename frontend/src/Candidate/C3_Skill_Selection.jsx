@@ -24,7 +24,7 @@ const C3_Skill_Selection = () => {
                 const token = localStorage.getItem("token");
 
                 const response = await fetch(
-                    "http://localhost:5000/api/skills",
+                    "https://skillbridge-adca.onrender.com/api/skills",
                     {
                         headers: {
                             Authorization: `Bearer ${token}`,

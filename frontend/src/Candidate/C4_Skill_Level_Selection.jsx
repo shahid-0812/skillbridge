@@ -41,7 +41,7 @@ const C4_Skill_Level_Selection = () => {
                 const token = localStorage.getItem("token");
 
                 const response = await fetch(
-                    "http://localhost:5000/api/skills",
+                    "https://skillbridge-adca.onrender.com/api/skills",
                     {
                         headers: {
                             Authorization: `Bearer ${token}`,
@@ -141,7 +141,7 @@ const C4_Skill_Level_Selection = () => {
 
             for (const skill of skills) {
                 const response = await fetch(
-                    "http://localhost:5000/api/candidates/me/skills",
+                    "https://skillbridge-adca.onrender.com/api/candidates/me/skills",
                     {
                         method: "POST",
                         headers: {
