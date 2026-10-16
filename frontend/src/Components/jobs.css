@@ -1,0 +1,76 @@
+
+
+
+
+
+    /* Extracted for C10_Jobs_Internships.jsx from styles.css */
+
+    .screen {
+        display:none; animation:fadein .25s ease;
+    }
+
+    .screen.active {
+        display:block;
+    }
+
+    .card {
+        background:var(--card); border:1px solid var(--line); border-radius:var(--r-lg); padding:20px; box-shadow:var(--shadow-1);
+    }
+
+    .btn {
+        display:inline-flex; align-items:center; justify-content:center; gap:8px; border-radius:var(--r-sm); border:1px solid transparent; padding:10px 18px; font-size:13px; font-weight:600; transition:.12s; white-space:nowrap;
+    }
+
+    .btn-primary {
+        background:var(--blue-500); color:#fff; box-shadow:0 1px 2px rgba(41, 84, 255, .3);
+    }
+
+    .btn-primary:hover {
+        background:var(--blue-600);
+    }
+
+    .btn-outline {
+        background:#fff; border-color:var(--line); color:var(--ink-2);
+    }
+
+    .btn-outline:hover {
+        background:var(--bg);
+    }
+
+    .btn-block {
+        width:100%;
+    }
+
+    .btn[disabled] {
+        opacity:.5; cursor:not-allowed;
+    }
+
+    .badge {
+        display:inline-flex; align-items:center; gap:5px; font-size:11px; font-weight:700; padding:4px 10px; border-radius:var(--r-pill);
+    }
+
+    .badge-green {
+        background:var(--green-bg); color:var(--green);
+    }
+
+    .badge-blue {
+        background:var(--blue-50); color:var(--blue-700);
+    }
+
+    .badge-grey {
+        background:var(--bg); color:var(--muted);
+    }
+
+    .mt-14 {
+        margin-top:14px;
+    }
+
+    .login-role-card > .fa-arrow-right {
+        color: #a0aabe;
+        font-size: 10px;
+    }
+
+    .c2-dashboard .card {
+        width:100%;
+        max-width:none;
+    }
