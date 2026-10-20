@@ -13,9 +13,11 @@ const {
     updateAssessmentQuestion,
     deleteAssessmentQuestion,
     publishJobAssessment,
-    publishJob
+    publishJob,
 } = require("../controllers/hrJobController");
-
+const {
+  generateJobDescription,
+} = require("../controllers/hrAiController");
 const authenticate = require("../middleware/authMiddleware");
 
 const {
@@ -23,7 +25,12 @@ const {
 } = require("../middleware/hrAuthorizationMiddleware");
 
 const router = express.Router();
-
+router.post(
+  "/ai/job-description",
+  authenticate,
+  authorizeHR,
+  generateJobDescription
+);
 router.get(
     "/",
     authenticate,

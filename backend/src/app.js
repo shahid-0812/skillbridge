@@ -54,6 +54,8 @@ app.use(
 );
 app.use(express.json({ limit: "1mb" }));
 
+app.use("/api/hr/jobs", hrJobRoutes);
+
 /*
  * Root / health endpoint
  */
